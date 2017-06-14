@@ -1,1 +1,9 @@
+iex (1)> list = [rock,paper,scissor]
+["rock", "paper", "scissor"]
 
+iex (2)> Enum.random(list)
+... # give an answer
+
+# Waiting for Player answer
+
+IO.puts()
