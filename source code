@@ -1,1 +1,23 @@
+iex (1)> { :ok , scissor } = { :ok , "scissor" } 
+{ :ok , "scissor" } 
+  
+iex (2)> { :bt , paper } = { :bt , "paper" } 
+{ :bt , "paper }  
+ 
+iex (3)> { :ft , rock } = { :ft , "rock" } 
+{ :ft , "rock" }  
+ 
+iex (4)> list = [ rock, paper, scissor ] 
+[ "rock", "paper", "scissor" ] 
 
+iex (5)> defmodule Randomprinter do
+  (...)       def randm(Enum.random(list)) do         <====== !!! DOESN'T WORK !!!
+  (...)         BotsAnswer = Randomprinter.randm(list)
+
+# player's answer ...
+
+  (...)         IO.put "Bot plays #{BotsAnswer} !"
+  (...)       end
+  (...)end
+  
+  # compare
