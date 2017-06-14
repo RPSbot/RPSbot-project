@@ -1,9 +1,12 @@
 iex (1)> list = [rock,paper,scissor]
 ["rock", "paper", "scissor"]
 
-iex (2)> Enum.random(list)
-... # give an answer
+defmodule Randomprinter do
+  def randm(Enum.random(list)) do
+    BotsAnswer = Randomprinter.randm(list) <==== !!! doesn't work !!!
 
-# Waiting for Player answer
+# Waiting for player's answer ...
 
-IO.puts()
+      IO.puts "Bot plays #{BotsAnswer} !"
+  end
+end
