@@ -2,8 +2,8 @@ iex (1)> list = [rock,paper,scissor]
 ["rock", "paper", "scissor"]
 
 defmodule Randomprinter do
-  def randm(Enum.random(list)) do
-    BotsAnswer = Randomprinter.randm(list) <==== !!! doesn't work !!!
+  def randm(Enum.random(list)) do     <==== !!! DOESN'T WORK !!!
+    BotsAnswer = Randomprinter.randm(list) 
 
 # Waiting for player's answer ...
 
