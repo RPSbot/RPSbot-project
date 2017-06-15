@@ -1,22 +1,12 @@
-iex (1)> { :ok , scissor } = { :ok , "scissor" } 
-{ :ok , "scissor" } 
-  
-iex (2)> { :bt , paper } = { :bt , "paper" } 
-{ :bt , "paper }  
- 
-iex (3)> { :ft , rock } = { :ft , "rock" } 
-{ :ft , "rock" }  
- 
-iex (4)> list = [ rock, paper, scissor ] 
-[ "rock", "paper", "scissor" ] 
+defmodule Choice do
+    def player do
+      answer = IO.gets("What do you wanna play between : rock,paper or scissor ?") |> String.trim
+      IO.puts "#{answer}"
+      
+      list = ["rock", "paper", "scissor"]   
+      answerb = IO.puts"Bot plays #{Enum.random(list)}"
+    end
 
-iex (5)> defmodule Randomiser do
-  (...)         choix = Enum.random(list)         <====== !!! DOESN'T WORK : it answers everytime, "I've chosen rockpaperscissor" !!!
-  (...)         def mine(choix) do
-  # player's answer ...
-  (...)         "I've chosen #{choix} !"  
-  (...)         end
-  (...) end
-  
-  
+
+
   # compare
