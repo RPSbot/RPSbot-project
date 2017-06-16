@@ -1,4 +1,4 @@
-defmodule Randomiser do
+fdefmodule Randomiser do
   def rand do
      list = [ 1, 2, 3]
      IO.puts "Answer is #{Enum.random(list)} 
