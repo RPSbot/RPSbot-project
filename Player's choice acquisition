@@ -1,0 +1,6 @@
+defmodule Acq do
+  def acquire do
+    answer = IO.gets ("What is your answer ? ") |> String.trim
+    IO.puts "Your answer is #{answer} !"
+  end
+end  
