@@ -1,11 +1,17 @@
 defmodule Choice do
+    def main do
+     player()
+     robotp()
+    end
+    
     def player do
       answer = IO.gets("What do you wanna play between : rock,paper or scissor ?") |> String.trim
       IO.puts "#{answer}"
-      
+    end
+    
+    def robotp do
       list = ["rock", "paper", "scissor"]   
       answerb = Enum.random(list)
-      IO.inspect(answerb)
       IO.puts "Bot plays #{answerb} !"
     end
 end
