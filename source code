@@ -4,9 +4,11 @@ defmodule Choice do
       IO.puts "#{answer}"
       
       list = ["rock", "paper", "scissor"]   
-      answerb = IO.puts"Bot plays #{Enum.random(list)}"
+      answerb = Enum.random(list)
+      IO.inspect(answerb)
+      IO.puts "Bot plays #{answerb} !"
     end
-
+end
 
 
   # compare
