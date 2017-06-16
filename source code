@@ -1,7 +1,7 @@
 defmodule Choice do
     def main do
      player()
-     robotp()
+     robot()
     end
     
     def player do
@@ -9,7 +9,7 @@ defmodule Choice do
       IO.puts "#{answer}"
     end
     
-    def robotp do
+    def robot do
       list = ["rock", "paper", "scissor"]   
       answerb = Enum.random(list)
       IO.puts "Bot plays #{answerb} !"
