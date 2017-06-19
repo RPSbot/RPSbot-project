@@ -1,20 +1,25 @@
-defmodule Choice do
+defmodule RPS do
     def main do
-     player()
-     robot()
-    end
-    
-    def player do
-      answer = IO.gets("What do you wanna play between : rock,paper or scissor ?") |> String.trim
-      IO.puts "#{answer}"
-    end
-    
-    def robot do
-      list = ["rock", "paper", "scissor"]   
-      answerb = Enum.random(list)
-      IO.puts "Bot plays #{answerb} !"
+     answerp = IO.gets ("What do you want to play between : rock, paper or scissor ? ") |> String.trim
+     IO.puts "Player : #{answerp}"
+     list = ["rock", "paper", "scissor"]
+     answerb = Enum.random(list)
+     IO.puts "Bot : #{answerb}"
+     cond do
+      (answerp == "rock") and (answerb == "paper") ->
+        IO.puts "Bot wins"
+      (answerp == "rock") and (answerb == "scissor") ->
+        IO.puts "Player wins"
+      (answerp == "paper") and (answerb == "scissor") ->
+        IO.puts "Bot wins"
+      (answerp == "paper") and (answerb == "rock") ->
+        IO.puts "Player wins"
+      (answerp == "scissor") and (answerb == "rock") ->
+        IO.puts "Bot wins"
+      (answerp == "scissor") and (answerb == "paper") ->
+        IO.puts "Player wins"
+      true ->
+        IO.puts "Equality"
+     end
     end
 end
-
-
-  # compare
